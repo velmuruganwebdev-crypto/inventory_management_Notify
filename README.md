@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Inventory_Screenshot" src="https://github.com/user-attachments/assets/32cc1ce4-d4bb-47eb-98f5-58c1e8687d87" /><img width="1920" height="1080" alt="Tracking_Screenshot" src="https://github.com/user-attachments/assets/e8b8e40d-fd92-46ee-a2a8-fa5470f895e3" /><img width="1920" height="1080" alt="Stock_Screenshot" src="https://github.com/user-attachments/assets/ab6ea9d6-4bd9-4733-b3ce-494dad514829" />## Installation
+### Installation
 
 ### 1. Clone the repository
 
