@@ -1,4 +1,4 @@
-## Installation
+<img width="1920" height="1080" alt="Inventory_Screenshot" src="https://github.com/user-attachments/assets/32cc1ce4-d4bb-47eb-98f5-58c1e8687d87" /><img width="1920" height="1080" alt="Tracking_Screenshot" src="https://github.com/user-attachments/assets/e8b8e40d-fd92-46ee-a2a8-fa5470f895e3" /><img width="1920" height="1080" alt="Stock_Screenshot" src="https://github.com/user-attachments/assets/ab6ea9d6-4bd9-4733-b3ce-494dad514829" />## Installation
 
 ### 1. Clone the repository
 
@@ -35,7 +35,7 @@ python manage.py runserver
 Project Structure
 
 inventory_tracker/
-│
+
 ├── inventory/            # Django app
 │   ├── migrations/
 │   ├── templates/        # HTML templates
@@ -48,3 +48,12 @@ inventory_tracker/
 ├── inventory_tracker/    # Project settings
 ├── manage.py
 └── requirements.txt
+<img width="1920" height="1080" alt="Tracking_Screenshot" src="https://github.com/user-attachments/assets/7ac8a676-748a-4c95-95a7-d6a48b763800" />
+<img width="1920" height="1080" alt="Stock_Screenshot" src="https://github.com/user-attachments/assets/e399eeea-46cc-4be5-bea9-4a7475effcdd" />
+<img width="1920" height="1080" alt="Notification_Screenshot" src="https://github.com/user-attachments/assets/fb0d88ea-796f-491f-b670-9aaa5727799d" />
+<img width="1920" height="1080" alt="Inventory_Screenshot" src="https://github.com/user-attachments/assets/7f6ca75a-7f61-4593-b4cf-54112b4b5023" />
+
+
+
+
+
