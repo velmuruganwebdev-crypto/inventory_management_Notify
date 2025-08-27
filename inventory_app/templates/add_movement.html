@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add Inventory Movement</h2>
+<form method="POST" id="movementForm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href="{% url 'movement_list' %}" class="btn btn-secondary mt-3">View Movements</a>
+
+<!-- Toast Container -->
+<div id="toast" class="toast"></div>
+
+<script>
+// Check URL for success query parameter
+const params = new URLSearchParams(window.location.search);
+if (params.get("success")) {
+    const item = params.get("item") || "Product";
+    const toast = document.getElementById("toast");
+    toast.textContent = item + " moved successfully!";
+    toast.classList.add("show");
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+}
+</script>
+
+<style>
+/* Toast centered at top */
+.toast {
+    visibility: hidden;
+    min-width: 300px;
+    max-width: 80%;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 15px 25px;
+    position: fixed;
+    top: 20px;           /* distance from top */
+    left: 50%;           /* center horizontally */
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+{% endblock %}

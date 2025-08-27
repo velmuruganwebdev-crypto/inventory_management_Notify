@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Inventory Movements</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Source</th>
+            <th>Target</th>
+            <th>Notes</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for movement in movements %}
+        <tr>
+            <td>{{ movement.item.name }}</td>
+            <td>{{ movement.quantity }}</td>
+            <td>
+                {% if movement.source_warehouse %}
+                    {{ movement.source_warehouse.name }}
+                {% else %}
+                    -
+                {% endif %}
+            </td>
+            <td>
+                {% if movement.target_warehouse %}
+                    {{ movement.target_warehouse.name }}
+                {% else %}
+                    -
+                {% endif %}
+            </td>
+            <td>{{ movement.notes }}</td>
+            <td>{{ movement.timestamp }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6" class="text-center">No movements found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'add_movement' %}" class="btn btn-primary mt-3">Add Movement</a>
+{% endblock %}

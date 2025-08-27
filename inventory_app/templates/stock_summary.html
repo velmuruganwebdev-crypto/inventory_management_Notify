@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Stock Summary</h2>
+{% for w in summary %}
+    <h4>{{ w.warehouse }}</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in w.stock %}
+            <tr>
+                <td>{{ i.item }}</td>
+                <td>{{ i.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endfor %}
+<a href="{% url 'add_movement' %}" class="btn btn-primary mt-3">Add Movement</a>
+{% endblock %}
